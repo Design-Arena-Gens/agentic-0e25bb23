@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #f9fafb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: rgba(34, 197, 94, 0.35);
+  color: #f9fafb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  backdrop-filter: blur(12px);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.35);
+}
